@@ -34,7 +34,7 @@ class postJobs extends React.Component {
             const isMyTokenExpired = isExpired(token);
             console.log(myDecodedToken.user._id)
             console.log(isMyTokenExpired)
-            if (isMyTokenExpired) {
+            if (!isMyTokenExpired) {
                 const { data } = await axios.post(`${Url.backendUrl}/jobs/post`, {
                     position, qualification, minimum, maximum, jobDescription, NatureOfJob, userId: myDecodedToken.user._id,
                     companyName, companyWebsite

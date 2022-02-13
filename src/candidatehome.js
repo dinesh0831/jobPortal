@@ -51,7 +51,7 @@ const apply=async(item)=>{
         const isMyTokenExpired = isExpired(token);
         console.log(myDecodedToken)
         console.log(isMyTokenExpired)
-        if (isMyTokenExpired) {
+        if (!isMyTokenExpired) {
             await axios.post(`${Url.backendUrl}/users/apply`,
             {appliedJob:item,user:myDecodedToken.user._id})
             toast.success("Successfully applied for"+item.position)

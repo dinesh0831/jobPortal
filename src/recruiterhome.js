@@ -51,7 +51,7 @@ function RecruiterHome() {
             const isMyTokenExpired = isExpired(token);
             console.log(myDecodedToken)
             console.log(isMyTokenExpired)
-            if (isMyTokenExpired) {
+            if (!isMyTokenExpired) {
                 await axios.delete(`${Url.backendUrl}/jobs/${Id}`)
                 const { data } = await axios.get(`${Url.backendUrl}/jobs/getusers/${myDecodedToken.user._id}`)
                 setData(data)

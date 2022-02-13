@@ -1,4 +1,4 @@
 export const Url={
-    backendUrl:"https://jobportal-dinesh.herokuapp.com"
+    backendUrl:"http://localhost:3001"
 
 }
