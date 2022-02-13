@@ -101,7 +101,7 @@ const logout = () => {
                         <ListItemIcon>
                            <LogoutIcon/>
                         </ListItemIcon>
-                        <ListItemText primary={ isExpired(token) && localStorage.getItem("clone") ? "logout" : "login"} />
+                        <ListItemText primary={ !isExpired(token) && localStorage.getItem("clone") ? "logout" : "login"} />
                     </ListItem>
                     
                   
